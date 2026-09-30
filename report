@@ -1,0 +1,71 @@
+CUSTOMER CHURN ANALYSIS AND PREDICTION
+IBM SkillsBuild Data Analytics with AI Academic Internship 2026
+Student: Aman Mishra
+Institution: United University, Prayagraj
+Project Domain: Data Analytics and Machine Learning
+1. Abstract
+Customer churn refers to customers discontinuing a service. In subscription-based telecommunications, understanding churn patterns can help organizations monitor customer segments and design data-informed retention activities. This project uses the IBM Telco Customer Churn sample dataset to perform data cleaning, exploratory data analysis, visualization and supervised machine learning.
+2. Problem Statement
+The objective is to analyze customer characteristics associated with observed churn and demonstrate a machine-learning workflow that predicts the churn class from available customer attributes.
+3. Objectives
+    • Understand the structure and quality of the customer dataset.
+    • Clean and preprocess numerical and categorical variables.
+    • Explore churn patterns using descriptive statistics and visualizations.
+    • Compare observed churn rates across contract, service, payment and tenure segments.
+    • Build Logistic Regression and Decision Tree classification models.
+    • Evaluate models using accuracy, precision, recall, F1-score and ROC-AUC.
+    • Translate analytical outputs into clear business-oriented observations.
+4. Dataset Description
+The project uses the public IBM Telco Customer Churn sample dataset. It contains 7,043 customer records and 21 columns. The target variable is Churn, which indicates whether a customer left the service. The dataset contains demographic, service, account, contract, payment and billing attributes.
+Category	Examples	Purpose
+Customer profile	gender, SeniorCitizen, Partner, Dependents	Customer characteristics
+Services	InternetService, TechSupport, StreamingTV	Service usage
+Account	tenure, Contract, PaymentMethod	Account relationship
+Billing	MonthlyCharges, TotalCharges	Financial attributes
+Target	Churn	Classification outcome
+5. Tools and Technologies
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn and Jupyter Notebook.
+6. Methodology
+    1. Data loading and inspection
+    2. Data cleaning and type conversion
+    3. Exploratory Data Analysis
+    4. Visualization
+    5. Feature preprocessing
+    6. Train-test split with stratification
+    7. Logistic Regression classification
+    8. Decision Tree classification
+    9. Model evaluation
+    10. Business interpretation
+7. Data Cleaning
+The TotalCharges field is converted to numeric values with invalid/blank entries represented as missing values. Duplicate customer IDs are checked and duplicate records are removed. The target Churn field is encoded as 0 for No and 1 for Yes. CustomerID is excluded from model training because it is an identifier.
+8. Exploratory Data Analysis
+EDA examines the overall churn distribution and compares churn across contract type, internet service, payment method and tenure bands. Monthly charges are compared by churn status, and a correlation heatmap is produced for selected numerical variables.
+    • Overall churn distribution
+    • Churn rate by contract type
+    • Churn rate by internet service
+    • Churn rate by payment method
+    • Churn rate by tenure band
+    • Monthly charges by churn status
+    • Correlation heatmap
+9. Machine Learning
+Two supervised classification models are implemented: Logistic Regression and a Decision Tree. Numerical variables are imputed and standardized, while categorical variables are imputed and one-hot encoded. Preprocessing is placed inside a scikit-learn Pipeline and ColumnTransformer.
+10. Model Evaluation
+The notebook calculates Accuracy, Precision, Recall, F1-score and ROC-AUC on a held-out test set. Confusion matrices and ROC curves are also generated. Exact values are intentionally calculated by the notebook at execution time so that the report remains reproducible with the stated dataset and code.
+11. Key Analytical Questions
+    • Which contract category has the highest observed churn rate?
+    • How does churn vary with customer tenure?
+    • How do payment methods differ in observed churn rate?
+    • How does monthly billing differ between churned and retained customers?
+    • Which customer segments should be monitored for higher predicted churn probability?
+12. Business Insights
+The notebook automatically calculates segment-level churn rates and prints the highest observed segment for selected categorical variables. These results should be interpreted as associations in the sample. They should not be treated as proof that a particular contract, service or payment method causes churn.
+13. Conclusion
+The project demonstrates a complete data analytics and machine-learning workflow from raw customer data to model evaluation and business interpretation. It provides hands-on practice in data cleaning, EDA, visualization, preprocessing, classification and evaluation, matching the practical skills expected from a Data Analytics project.
+14. Limitations and Future Scope
+    • The dataset is a public sample and represents a historical snapshot rather than a live production system.
+    • The analysis is observational and does not establish causal relationships.
+    • Future work could compare additional models such as Random Forest or Gradient Boosting.
+    • Probability calibration, fairness checks, cost-sensitive evaluation and model monitoring could be added for production use.
+    • A dashboard in Power BI or Tableau could be added as a separate visualization layer.
+15. Dataset Source
+IBM Telco Customer Churn sample dataset: https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv
