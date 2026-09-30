@@ -1,0 +1,53 @@
+Customer Churn Analysis and Prediction
+Student: Aman Mishra
+Institution: United University, Prayagraj
+Program: IBM SkillsBuild Data Analytics with AI Academic Internship 2026
+
+Project Overview
+This project analyzes customer churn using the IBM Telco Customer Churn sample dataset. The workflow includes data cleaning, exploratory data analysis (EDA), visualization, feature preprocessing, Logistic Regression, Decision Tree classification, model evaluation, and business-oriented interpretation.
+
+Dataset
+Dataset: IBM Telco Customer Churn sample dataset
+Rows: 7,043 customers
+Columns: 21
+Target: Churn
+
+Dataset URL:
+https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv
+
+Technologies Used
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
+Jupyter Notebook
+Project Workflow
+Load dataset
+Inspect structure and missing values
+Clean and convert TotalCharges
+Remove duplicate customer IDs
+Perform EDA
+Analyze churn by contract, internet service, payment method and tenure
+Visualize numerical relationships
+Encode categorical variables
+Train Logistic Regression
+Train Decision Tree
+Evaluate accuracy, precision, recall, F1 and ROC-AUC
+Generate business-oriented insights
+How to Run
+Install dependencies:
+
+pip install -r requirements.txt
+Start Jupyter:
+
+jupyter notebook
+Open AmanMishra_CustomerChurnAnalysis.ipynb and run all cells from top to bottom.
+
+The notebook downloads the public dataset directly from the IBM GitHub source when it is executed.
+
+Notes
+This is an educational/academic analytics project.
+The dataset is a public sample dataset, not a live telecom customer database.
+Model predictions should not be treated as production decisions without further validation, monitoring and fairness assessment.
